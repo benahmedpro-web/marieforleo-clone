@@ -1,6 +1,7 @@
 'use client';
 
 import { Header } from '@/components/Header';
+import { HashScrollHandler } from '@/components/HashScrollHandler';
 import { HeroSection } from '@/components/HeroSection';
 import { AboutSection } from '@/components/AboutSection';
 import { MaDemarcheSection } from '@/components/MaDemarcheSection';
@@ -16,6 +17,7 @@ import { Footer } from '@/components/Footer';
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <HashScrollHandler />
       <Header />
       <HeroSection />
       <AboutSection />
