@@ -18,6 +18,9 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <MaDemarcheSection />
+      <section id="parcours">
+        <ParcoursSection />
+      </section>
       <PressSection />
       <OptInSection />
       <section id="formations" className="bg-white py-16 md:py-24">
@@ -34,9 +37,6 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Libre d'être misandre</h2>
           <p className="text-gray-600">Un manifeste pour les femmes qui refusent les compromis</p>
         </div>
-      </section>
-      <section id="parcours">
-        <ParcoursSection />
       </section>
       <section id="retours" className="bg-white py-16 md:py-24">
         {/* Retours Section - Testimonials */}
