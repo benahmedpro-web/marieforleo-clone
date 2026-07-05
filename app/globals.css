@@ -1,26 +1,136 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
 
+@import 'tailwindcss';
+
+/* CSS Variables for Colors */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Core Colors */
+  --color-black: #000000;
+  --color-dark: #1a1a1a;
+  --color-taupe: #d4c5b0;
+  --color-beige: #e8ddd0;
+  --color-coral: #e8b4a8;
+  --color-rose: #d4a5a0;
+  --color-lime: #d4e157;
+  --color-turquoise: #00ced1;
+  --color-blue-primary: #0099cc;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+  font-family: system-ui, -apple-system, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 8vw, 4.5rem);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 4vw, 2rem);
+}
+
+p {
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  background-color: transparent;
+}
+
+input::placeholder {
+  color: var(--color-rose);
+}
+
+/* Animations */
+@keyframes bounce-vertical {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-bounce-vertical {
+  animation: bounce-vertical 2s infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.25s ease-out;
+}
+
+/* Custom Utilities */
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.text-taupe {
+  color: var(--color-taupe);
+}
+
+.text-coral {
+  color: var(--color-coral);
+}
+
+.bg-taupe {
+  background-color: var(--color-taupe);
+}
+
+.bg-beige {
+  background-color: var(--color-beige);
+}
+
+.bg-coral {
+  background-color: var(--color-coral);
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
 }
