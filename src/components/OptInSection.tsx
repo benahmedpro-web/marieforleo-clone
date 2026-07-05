@@ -146,7 +146,7 @@ export function OptInSection() {
               {/* Placeholder for Lena's photo */}
               <div className="relative aspect-square bg-gray-200 rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/lena-photo.jpg"
+                  src="/images/lena-profile.jpg"
                   alt="Lena Ben Ahmed"
                   fill
                   className="object-cover"

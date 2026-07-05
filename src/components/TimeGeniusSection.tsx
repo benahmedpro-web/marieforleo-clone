@@ -68,7 +68,7 @@ export function TimeGeniusSection() {
 
               {/* Image */}
               <Image
-                src="/images/marie-desk-laptop.jpg"
+                src="/images/lena-profile.jpg"
                 alt="Lena Ben Ahmed - Formation sur les violences de genre en milieu professionnel"
                 width={500}
                 height={500}

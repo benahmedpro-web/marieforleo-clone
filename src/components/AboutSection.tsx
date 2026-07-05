@@ -51,7 +51,7 @@ export function AboutSection() {
           <div className="flex-1 w-full">
             <div className="relative aspect-square md:aspect-auto md:h-96 lg:h-full rounded overflow-hidden">
               <Image
-                src="/images/lena-photo.jpg"
+                src="/images/lena-profile.jpg"
                 alt="Lena Ben Ahmed"
                 width={500}
                 height={600}
