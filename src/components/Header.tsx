@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { HamburgerIcon, CloseIcon } from './icons';
 
 const navigationLinks = [
@@ -22,8 +23,18 @@ export function Header() {
       <div className="flex items-center justify-between px-4 py-4 md:px-8">
         {/* Logo */}
         <div className="flex-shrink-0">
-          <a href="/" className="text-[18px] md:text-[24px] font-serif font-bold text-[#1A1A1A]">
-            Lena Ben Ahmed
+          <a href="/" className="flex items-center gap-2">
+            <div className="relative w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
+              <Image
+                src="/images/lena-profile.jpg"
+                alt="Lena Ben Ahmed"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <span className="text-[18px] md:text-[22px] font-serif italic text-[#1A1A1A]">
+              Lena Ben Ahmed
+            </span>
           </a>
         </div>
 
@@ -33,7 +44,7 @@ export function Header() {
             <a
               key={link.label}
               href={link.href}
-              className="text-[14px] text-[#1A1A1A] hover:text-[#E8B4A8] transition-colors duration-200"
+              className="text-[14px] font-medium text-[#1A1A1A] hover:text-[#E8B4A8] transition-colors duration-200"
             >
               {link.label}
             </a>

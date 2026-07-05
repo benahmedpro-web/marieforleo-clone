@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export function AboutSection() {
   return (
-    <section className="bg-about py-16 md:py-24">
+    <section id="about" className="bg-about py-16 md:py-24">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col md:flex-row-reverse gap-12 md:gap-16 items-center md:items-start">
           {/* Right Column: Text Content */}

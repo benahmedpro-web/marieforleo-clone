@@ -1,48 +1,57 @@
 'use client';
 
-import { PlayIcon, ChevronDownIcon } from './icons';
-
 export function HeroSection() {
   const handleFormationsClick = () => {
-    // Scroll to formations section
     const formationsSection = document.getElementById('formations');
     if (formationsSection) {
       formationsSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
+  const handleAboutClick = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="relative h-screen bg-black flex flex-col items-center justify-center">
+    <section className="relative bg-[#FBDFDB] flex flex-col items-center justify-center py-24 md:py-32">
       {/* Main content */}
-      <div className="flex flex-col items-center justify-center flex-1 px-4 text-center">
+      <div className="flex flex-col items-center justify-center px-4 text-center max-w-4xl mx-auto">
+        {/* Eyebrow tag */}
+        <p
+          className="text-xs md:text-sm font-medium mb-6"
+          style={{
+            letterSpacing: '2px',
+            textTransform: 'uppercase',
+            color: '#8B7355',
+          }}
+        >
+          Formatrice · Autrice · Consultante
+        </p>
+
         {/* Large heading */}
-        <h1 className="text-3xl md:text-6xl font-serif font-normal text-white mb-8 md:mb-12 max-w-4xl leading-tight">
-          Une expertise en genre pour penser, agir et{' '}
-          <span className="text-coral italic">transmettre</span>
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-normal text-[#1A1A1A] mb-10 max-w-3xl leading-tight">
+          Une expertise en genre pour penser, agir et transmettre
         </h1>
 
-        {/* Formations button */}
-        <button
-          onClick={handleFormationsClick}
-          className="flex items-center gap-3 px-6 py-3 rounded-full hover:opacity-80 transition-opacity duration-300 group"
-          aria-label="Voir les formations"
-        >
-          <div className="relative w-12 h-12 flex items-center justify-center">
-            {/* Gray circle background */}
-            <div className="absolute inset-0 rounded-full border-2 border-gray-500"></div>
-            {/* Play icon */}
-            <div className="text-gray-500 group-hover:text-gray-400 transition-colors">
-              <PlayIcon />
-            </div>
-          </div>
-          <span className="text-white text-sm md:text-base">Voir les formations</span>
-        </button>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <div className="animate-bounce-vertical text-gray-500 hover:text-gray-400 transition-colors cursor-pointer">
-          <ChevronDownIcon />
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row items-center gap-4">
+          <button
+            onClick={handleFormationsClick}
+            className="px-8 py-3 bg-[#1A1A1A] text-white text-sm font-semibold uppercase tracking-wide hover:bg-black transition-colors duration-300"
+            aria-label="Voir les formations"
+          >
+            Voir les formations
+          </button>
+          <button
+            onClick={handleAboutClick}
+            className="px-8 py-3 bg-white text-[#1A1A1A] text-sm font-semibold uppercase tracking-wide border border-[#1A1A1A] hover:bg-gray-50 transition-colors duration-300"
+            aria-label="En savoir plus"
+          >
+            En savoir plus
+          </button>
         </div>
       </div>
     </section>
