@@ -48,11 +48,13 @@ export function LivreSection() {
             </p>
 
             <p className="text-base text-gray-700 mb-6 leading-relaxed">
-              De Tanaland aux procès de Mazan, en passant par des théoriciennes féministes emblématiques, <em>Libre d&apos;être misandre</em> explore la montée en puissance d&apos;un phénomène qui bouscule les masculinistes et pas que. Comment la misandrie s&apos;est-elle imposée dans le débat public ? Cet essai interroge la manière dont elle transforme les rapports de force et redéfinit la place de la colère dans les luttes féministes contemporaines.
+              De Tanaland aux procès de Mazan, en passant par des théoriciennes féministes emblématiques, <em>Libre d&apos;être misandre</em>{' '}
+              explore la montée en puissance d&apos;un phénomène qui bouscule les masculinistes et pas que. Comment la misandrie s&apos;est-elle imposée dans le débat public ? Cet essai interroge la manière dont elle transforme les rapports de force et redéfinit la place de la colère dans les luttes féministes contemporaines.
             </p>
 
             <p className="text-base text-gray-900 font-semibold mb-10 leading-relaxed">
-              En mêlant sociologie, pop culture et faits d&apos;actualité, Lena Ben Ahmed analyse les usages, significations, réceptions et effets de la misandrie. Entre les discours médiatiques qui la diabolisent et les féministes qui la revendiquent, <em>Libre d&apos;être misandre</em> plonge au cœur d&apos;une colère qui ne s&apos;excuse plus.
+              En mêlant sociologie, pop culture et faits d&apos;actualité, Lena Ben Ahmed analyse les usages, significations, réceptions et effets de la misandrie. Entre les discours médiatiques qui la diabolisent et les féministes qui la revendiquent, <em>Libre d&apos;être misandre</em>{' '}
+              plonge au cœur d&apos;une colère qui ne s&apos;excuse plus.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-4">
