@@ -3,9 +3,12 @@
 import { PlayIcon, ChevronDownIcon } from './icons';
 
 export function HeroSection() {
-  const handleVideoClick = () => {
-    // Placeholder for video modal/player logic
-    console.log('Play video clicked');
+  const handleFormationsClick = () => {
+    // Scroll to formations section
+    const formationsSection = document.getElementById('formations');
+    if (formationsSection) {
+      formationsSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -14,15 +17,15 @@ export function HeroSection() {
       <div className="flex flex-col items-center justify-center flex-1 px-4 text-center">
         {/* Large heading */}
         <h1 className="text-3xl md:text-6xl font-serif font-normal text-white mb-8 md:mb-12 max-w-4xl leading-tight">
-          Create a Business and Life You{' '}
-          <span className="text-coral italic">Love</span>
+          Une expertise en genre pour penser, agir et{' '}
+          <span className="text-coral italic">transmettre</span>
         </h1>
 
-        {/* Video button */}
+        {/* Formations button */}
         <button
-          onClick={handleVideoClick}
+          onClick={handleFormationsClick}
           className="flex items-center gap-3 px-6 py-3 rounded-full hover:opacity-80 transition-opacity duration-300 group"
-          aria-label="Watch video"
+          aria-label="Voir les formations"
         >
           <div className="relative w-12 h-12 flex items-center justify-center">
             {/* Gray circle background */}
@@ -32,7 +35,7 @@ export function HeroSection() {
               <PlayIcon />
             </div>
           </div>
-          <span className="text-white text-sm md:text-base">Watch Video</span>
+          <span className="text-white text-sm md:text-base">Voir les formations</span>
         </button>
       </div>
 

@@ -14,41 +14,42 @@ export default function Home() {
     <main className="min-h-screen">
       <Header />
       <HeroSection />
-      <div className="bg-white py-16 md:py-24">
-        {/* Money Sprint CTA Section - Coming Soon */}
-        <div className="container mx-auto text-center">
-          <p className="text-gray-400">Money Sprint Section - Placeholder</p>
-        </div>
-      </div>
       <AboutSection />
       <PressSection />
       <OptInSection />
+      <section id="formations" className="bg-white py-16 md:py-24">
+        {/* S'outiller Section - Learning Resources & Videos */}
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">S'outiller</h2>
+          <p className="text-gray-600">Ressources, vidéos et contenus pour progresser</p>
+        </div>
+      </section>
       <TimeGeniusSection />
-      <div className="bg-white py-16 md:py-24">
-        {/* MarieTV Section - Coming Soon */}
+      <section id="livre" className="bg-white py-16 md:py-24">
+        {/* Livre Section - "Libre d'être misandre" */}
         <div className="container mx-auto text-center">
-          <p className="text-gray-400">MarieTV Section - Placeholder</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Libre d'être misandre</h2>
+          <p className="text-gray-600">Un manifeste pour les femmes qui refusent les compromis</p>
         </div>
-      </div>
-      <div className="bg-white py-16 md:py-24">
-        {/* Book Section - Coming Soon */}
+      </section>
+      <section id="parcours" className="bg-white py-16 md:py-24">
+        {/* Parcours Section - Timeline/Journey */}
         <div className="container mx-auto text-center">
-          <p className="text-gray-400">Book Section - Placeholder</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Parcours</h2>
+          <p className="text-gray-600">Découvrez mon chemin et mon évolution</p>
         </div>
-      </div>
-      <div className="bg-white py-16 md:py-24">
-        {/* Podcast Section - Coming Soon */}
+      </section>
+      <section id="retours" className="bg-white py-16 md:py-24">
+        {/* Retours Section - Testimonials */}
+        <TestimonialsCarousel />
+      </section>
+      <section id="reseaux" className="bg-white py-16 md:py-24">
+        {/* Réseaux & Engagements Section */}
         <div className="container mx-auto text-center">
-          <p className="text-gray-400">Podcast Section - Placeholder</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Réseaux & Engagements</h2>
+          <p className="text-gray-600">Connectez-vous et découvrez mes collaborations</p>
         </div>
-      </div>
-      <TestimonialsCarousel />
-      <div className="bg-white py-16 md:py-24">
-        {/* Featured Guests Section - Coming Soon */}
-        <div className="container mx-auto text-center">
-          <p className="text-gray-400">Featured Guests Section - Placeholder</p>
-        </div>
-      </div>
+      </section>
       <Footer />
     </main>
   );

@@ -2,35 +2,30 @@
 
 import { FormEvent, useState } from 'react';
 
-const companyLinks = [
-  { label: 'About', href: '/about' },
-  { label: 'MarieTV', href: '/marietv' },
-  { label: 'Podcast', href: '/podcast' },
-  { label: 'Success Stories', href: '/success-stories' },
-  { label: 'New Here?', href: '/new-here' },
-  { label: 'Free Tools', href: '/free-tools' },
-  { label: 'Press & Media', href: '/press' },
-  { label: 'Giving Back', href: '/giving-back' },
-  { label: 'Jobs', href: '/jobs' },
-  { label: 'How We Roll', href: '/how-we-roll' },
+const aboutLinks = [
+  { label: 'À propos', href: '/about' },
+  { label: 'Parcours', href: '/parcours' },
+  { label: 'Presse & médias', href: '/presse' },
+  { label: 'Contact', href: '/contact' },
 ];
 
-const shopLinks = [
-  { label: 'B-School', href: '/shop/b-school' },
-  { label: 'The Copy Cure', href: '/shop/copy-cure' },
-  { label: 'Time Genius', href: '/shop/time-genius' },
-  { label: 'More', href: '/shop' },
+const resourcesLinks = [
+  { label: 'Formations', href: '/formations' },
+  { label: 'Livre', href: '/livre' },
+  { label: 'Articles', href: '/articles' },
+  { label: 'Newsletter', href: '/newsletter' },
+  { label: 'Substack', href: '/substack' },
 ];
 
 const legalLinks = [
-  { label: 'Terms', href: '/terms' },
-  { label: 'Privacy', href: '/privacy' },
-  { label: 'Cookie Policy', href: '/cookie-policy' },
+  { label: 'Mentions légales', href: '/mentions-legales' },
+  { label: 'Politique de confidentialité', href: '/privacy' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 export function Footer() {
-  const [formData, setFormData] = useState({ firstName: '', email: '' });
-  const [errors, setErrors] = useState({ firstName: '', email: '' });
+  const [formData, setFormData] = useState({ name: '', email: '' });
+  const [errors, setErrors] = useState({ name: '', email: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
@@ -48,21 +43,17 @@ export function Footer() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    const newErrors = { firstName: '', email: '' };
-
-    if (!formData.firstName.trim()) {
-      newErrors.firstName = 'First name is required';
-    }
+    const newErrors = { name: '', email: '' };
 
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
+      newErrors.email = 'Email est requis';
     } else if (!validateEmail(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
+      newErrors.email = 'Veuillez entrer une adresse email valide';
     }
 
     setErrors(newErrors);
 
-    if (newErrors.firstName || newErrors.email) {
+    if (newErrors.email) {
       return;
     }
 
@@ -76,7 +67,7 @@ export function Footer() {
 
       if (response.ok) {
         setSubmitted(true);
-        setFormData({ firstName: '', email: '' });
+        setFormData({ name: '', email: '' });
         setTimeout(() => setSubmitted(false), 5000);
       }
     } catch (error) {
@@ -94,41 +85,30 @@ export function Footer() {
           {/* Left Column: Email Signup Form */}
           <div className="md:col-span-1">
             <h3 className="text-2xl md:text-3xl font-serif font-bold text-[#1A1A1A] mb-6">
-              Become an MF Insider
+              Restez dans la boucle
             </h3>
 
             {submitted && (
               <div className="mb-4 p-3 bg-green-100 border border-green-400 rounded-lg">
                 <p className="text-green-800 font-medium text-sm">
-                  Thank you! Check your email.
+                  Merci ! Vérifiez votre email.
                 </p>
               </div>
             )}
 
             <form onSubmit={handleSubmit} className="space-y-4">
-              {/* First Name Input */}
+              {/* Name Input (Optional) */}
               <div>
                 <input
                   type="text"
-                  name="firstName"
-                  placeholder="First Name"
-                  value={formData.firstName}
+                  name="name"
+                  placeholder="Votre nom (optionnel)"
+                  value={formData.name}
                   onChange={handleChange}
                   disabled={isSubmitting}
-                  className={`w-full px-4 py-3 text-base border-2 rounded-lg focus:outline-none transition-colors ${
-                    errors.firstName
-                      ? 'border-red-500 focus:border-red-600 bg-red-50'
-                      : 'border-[#1A1A1A] focus:border-[#1A1A1A] bg-white'
-                  } disabled:opacity-60`}
-                  aria-label="First Name"
-                  aria-invalid={!!errors.firstName}
-                  aria-describedby={errors.firstName ? 'firstName-error' : undefined}
+                  className="w-full px-4 py-3 text-base border-2 border-[#1A1A1A] focus:border-[#1A1A1A] bg-white rounded-lg focus:outline-none transition-colors disabled:opacity-60"
+                  aria-label="Name"
                 />
-                {errors.firstName && (
-                  <p id="firstName-error" className="text-red-600 text-xs mt-1">
-                    {errors.firstName}
-                  </p>
-                )}
               </div>
 
               {/* Email Input */}
@@ -162,20 +142,25 @@ export function Footer() {
                 disabled={isSubmitting}
                 className="w-full bg-[#1A1A1A] hover:bg-[#2A2A2A] active:bg-black disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold text-sm uppercase py-3 px-4 rounded-lg transition-colors duration-200"
               >
-                {isSubmitting ? 'Sending...' : "Let's Do It"}
+                {isSubmitting ? 'Inscription...' : 'S\'INSCRIRE'}
               </button>
+
+              {/* Disclaimer */}
+              <p className="text-xs text-[#1A1A1A] text-center">
+                Pas de spam, désabonnement en un clic.
+              </p>
             </form>
           </div>
 
           {/* Right Column: Link Columns */}
           <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6">
-            {/* Company Column */}
+            {/* About Column */}
             <div>
-              <h4 className="text-lg font-serif font-bold text-[#1A1A1A] mb-4">
-                Company
+              <h4 className="text-lg font-serif font-bold text-[#1A1A1A] mb-4 uppercase">
+                À PROPOS
               </h4>
               <ul className="space-y-3">
-                {companyLinks.map((link) => (
+                {aboutLinks.map((link) => (
                   <li key={link.label}>
                     <a
                       href={link.href}
@@ -188,13 +173,13 @@ export function Footer() {
               </ul>
             </div>
 
-            {/* Shop Column */}
+            {/* Resources Column */}
             <div>
-              <h4 className="text-lg font-serif font-bold text-[#1A1A1A] mb-4">
-                Shop
+              <h4 className="text-lg font-serif font-bold text-[#1A1A1A] mb-4 uppercase">
+                RESSOURCES
               </h4>
               <ul className="space-y-3">
-                {shopLinks.map((link) => (
+                {resourcesLinks.map((link) => (
                   <li key={link.label}>
                     <a
                       href={link.href}
@@ -209,8 +194,8 @@ export function Footer() {
 
             {/* Legal Column */}
             <div>
-              <h4 className="text-lg font-serif font-bold text-[#1A1A1A] mb-4">
-                Legal
+              <h4 className="text-lg font-serif font-bold text-[#1A1A1A] mb-4 uppercase">
+                LÉGAL
               </h4>
               <ul className="space-y-3">
                 {legalLinks.map((link) => (
@@ -229,11 +214,38 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Bottom Section: Copyright */}
-      <div className="border-t border-[#C0B5A0] px-4 md:px-8 py-6 md:py-8">
+      {/* Bottom Section: Social Links & Copyright */}
+      <div className="border-t border-[#C0B5A0] px-4 md:px-8 py-8 md:py-10">
         <div className="max-w-6xl mx-auto">
+          {/* Social Media Links */}
+          <div className="flex justify-center gap-6 mb-6">
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#1A1A1A] hover:text-[#555] transition-colors duration-200"
+              aria-label="Instagram"
+            >
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0m0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m4.5 5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3m-9 1a3 3 0 1 1 0 6 3 3 0 0 1 0-6m0 1a2 2 0 1 0 0 4 2 2 0 0 0 0-4m5.5-1h2v5.5a3.5 3.5 0 0 1-3.5 3.5h-5a3.5 3.5 0 0 1-3.5-3.5v-8a3.5 3.5 0 0 1 3.5-3.5h8a.5.5 0 0 0 0-1h-8a4.5 4.5 0 0 0-4.5 4.5v8a4.5 4.5 0 0 0 4.5 4.5h5a4.5 4.5 0 0 0 4.5-4.5V6.5z" />
+              </svg>
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#1A1A1A] hover:text-[#555] transition-colors duration-200"
+              aria-label="LinkedIn"
+            >
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0m-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.492-1.1-1.1s.493-1.1 1.1-1.1c.606 0 1.1.492 1.1 1.1s-.493 1.1-1.1 1.1zM16 16h-1.993v-2.881c0-.881-.312-1.48-1.102-1.48-.601 0-.974.404-1.132.794-.058.143-.072.343-.072.543V16h-2v-6h1.993v.819c.257-.397.757-1.039 1.837-1.039 1.343 0 2.35.877 2.35 2.766V16z" />
+              </svg>
+            </a>
+          </div>
+
+          {/* Copyright */}
           <p className="text-center text-sm md:text-base text-[#1A1A1A]">
-            © 2026 Marie Forleo International
+            © 2025 Lena Ben Ahmed. Tous droits réservés.
           </p>
         </div>
       </div>

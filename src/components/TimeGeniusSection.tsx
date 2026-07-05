@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function TimeGeniusSection() {
   return (
@@ -16,7 +17,7 @@ export function TimeGeniusSection() {
                 fontSize: 'clamp(32px, 8vw, 48px)',
               }}
             >
-              Time Genius
+              FORMATIONS
             </h2>
 
             {/* Subheading */}
@@ -27,26 +28,26 @@ export function TimeGeniusSection() {
                 fontWeight: 400,
               }}
             >
-              Take Back Your Time. Get Back Your Life.
+              Violences de genre en milieu professionnel
             </h3>
 
             {/* Description Paragraph */}
             <p className="text-base md:text-lg text-gray-700 mb-10 leading-relaxed" style={{ lineHeight: '1.8', maxWidth: '600px' }}>
-              In this comprehensive course, you'll discover proven strategies to reclaim your time,
-              eliminate overwhelm, and design a life that truly reflects your values and priorities.
-              Learn how to work smarter, not harder, and create space for what matters most.
+              Une formation d'une journée (ou demi-journée) pour donner à vos équipes les outils pour identifier les violences de genre, comprendre les mécanismes de domination, et construire des pratiques professionnelles plus justes.
             </p>
 
-            {/* Get the Course Button */}
-            <button
-              className="inline-block px-8 md:px-10 py-3 md:py-4 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
-              style={{
-                background: 'linear-gradient(135deg, #00CED1 0%, #0099CC 100%)',
-              }}
-              aria-label="Get the Time Genius course"
-            >
-              Get the Course
-            </button>
+            {/* View All Formations Button */}
+            <Link href="/formations">
+              <button
+                className="inline-block px-8 md:px-10 py-3 md:py-4 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
+                style={{
+                  background: 'linear-gradient(135deg, #00CED1 0%, #0099CC 100%)',
+                }}
+                aria-label="View all formations"
+              >
+                VOIR TOUTES LES FORMATIONS
+              </button>
+            </Link>
           </div>
 
           {/* Right Column: Image with Badge */}
@@ -62,13 +63,13 @@ export function TimeGeniusSection() {
                   letterSpacing: '1px',
                 }}
               >
-                Time Genius
+                Formation
               </div>
 
               {/* Image */}
               <Image
                 src="/images/marie-desk-laptop.jpg"
-                alt="Marie Forleo at desk with laptop - Time Genius course"
+                alt="Lena Ben Ahmed - Formation sur les violences de genre en milieu professionnel"
                 width={500}
                 height={500}
                 className="w-full h-full object-cover"

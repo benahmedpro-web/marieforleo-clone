@@ -16,7 +16,7 @@ export function AboutSection() {
                 textTransform: 'uppercase',
               }}
             >
-              Heya!
+              Formatrice · Autrice · Consultante
             </p>
 
             {/* Heading */}
@@ -26,15 +26,16 @@ export function AboutSection() {
                 fontSize: 'clamp(48px, 10vw, 64px)',
               }}
             >
-              I'm Marie.
+              Lena Ben Ahmed
             </h2>
 
             {/* Bio Paragraph */}
             <p className="text-base md:text-lg text-gray-700 mb-8 leading-relaxed max-w-2xl">
-              I'm a business coach and digital entrepreneur on a mission to help
-              you build a life and business you love. Through my programs,
-              courses, and community, I empower ambitious people to create
-              impact, earn more, and live fuller lives.
+              J'accompagne les entreprises, les institutions, les associations et les établissements scolaires dans la prévention des violences sexistes et sexuelles, des discriminations racistes et LGBTQIA+phobes, à travers des formations, des ateliers et des accompagnements fondés sur les sciences sociales.
+            </p>
+
+            <p className="text-base md:text-lg text-gray-700 mb-8 leading-relaxed max-w-2xl">
+              Diplômée d'un master en Sciences Humaines et Sociales, spécialisée en études sur le genre, et d'une licence de psychologie, mon parcours conjugue recherche universitaire, expérience de terrain et transmission.
             </p>
 
             {/* Learn More Link */}
@@ -42,7 +43,7 @@ export function AboutSection() {
               href="/about"
               className="inline-block px-8 py-3 border-2 border-gray-900 text-gray-900 font-semibold hover:bg-gray-900 hover:text-white transition-colors duration-300"
             >
-              Learn More
+              EN SAVOIR PLUS
             </Link>
           </div>
 
@@ -50,8 +51,8 @@ export function AboutSection() {
           <div className="flex-1 w-full">
             <div className="relative aspect-square md:aspect-auto md:h-96 lg:h-full rounded overflow-hidden">
               <Image
-                src="/images/marie-photo.jpg"
-                alt="Marie Forleo"
+                src="/images/lena-photo.jpg"
+                alt="Lena Ben Ahmed"
                 width={500}
                 height={600}
                 className="w-full h-full object-cover"

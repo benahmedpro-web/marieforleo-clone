@@ -1,36 +1,39 @@
-import Image from 'next/image';
-
 export function PressSection() {
-  const logos = [
+  const partnerships = [
     {
-      name: 'Forbes',
-      src: '/images/logos/forbes.svg',
-      alt: 'Forbes',
+      name: '#NousToutes',
+      description: 'Coordination nationale',
+      url: 'https://noustoutes.org',
     },
     {
-      name: 'NY Times',
-      src: '/images/logos/nytimes.svg',
-      alt: 'New York Times',
+      name: 'Lyon 2',
+      description: 'Master 2 Sociologie — Genre',
+      url: 'https://www.univ-lyon2.fr',
     },
     {
-      name: 'goop',
-      src: '/images/logos/goop.svg',
-      alt: 'goop',
+      name: 'CIDFF Aude',
+      description: 'Interventions scolaires',
+      url: 'https://www.cidff.fr',
     },
     {
-      name: 'Today Show',
-      src: '/images/logos/today-show.svg',
-      alt: 'Today Show',
+      name: 'Empow\'Her',
+      description: 'Événements & ateliers',
+      url: '#',
     },
     {
-      name: 'Oprah',
-      src: '/images/logos/oprah.svg',
-      alt: 'Oprah',
+      name: 'Les Liens Qui Libèrent',
+      description: 'Co-autrice',
+      url: 'https://www.editionsliensquilibèrent.fr',
     },
     {
-      name: "Harper's Bazaar",
-      src: '/images/logos/harpers-bazaar.svg',
-      alt: "Harper's Bazaar",
+      name: 'Réseau VIF',
+      description: 'Violences Intrafamiliales',
+      url: '#',
+    },
+    {
+      name: 'Papeete',
+      description: 'Occitanie Formation régionale',
+      url: '#',
     },
   ];
 
@@ -39,27 +42,26 @@ export function PressSection() {
       <div className="container mx-auto px-4 md:px-8">
         {/* Heading */}
         <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white text-center mb-12 md:mb-16 lg:mb-20">
-          You Might Have Seen Me On
+          RÉSEAUX & ENGAGEMENTS
         </h2>
 
-        {/* Logo Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-10 lg:gap-12 items-center justify-items-center">
-          {logos.map((logo, index) => (
-            <div
+        {/* Partnerships Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10">
+          {partnerships.map((partnership, index) => (
+            <a
               key={index}
-              className="h-full flex items-center justify-center transition-opacity duration-300 hover:opacity-80 group"
+              href={partnership.url}
+              target={partnership.url !== '#' ? '_blank' : undefined}
+              rel={partnership.url !== '#' ? 'noopener noreferrer' : undefined}
+              className="group flex flex-col items-start justify-start p-6 md:p-8 border border-gray-600 rounded-lg hover:border-white transition-all duration-300 hover:bg-gray-900 cursor-pointer"
             >
-              <div className="relative w-full max-w-[120px] aspect-square flex items-center justify-center">
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={120}
-                  height={50}
-                  className="w-auto h-auto max-h-[50px] object-contain filter brightness-0 invert group-hover:brightness-110 transition-all duration-300"
-                  priority={index < 3}
-                />
-              </div>
-            </div>
+              <h3 className="text-lg md:text-xl font-semibold text-white mb-2 group-hover:text-gray-200 transition-colors duration-300">
+                {partnership.name}
+              </h3>
+              <p className="text-sm md:text-base text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                {partnership.description}
+              </p>
+            </a>
           ))}
         </div>
       </div>

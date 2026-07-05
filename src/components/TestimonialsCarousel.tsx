@@ -11,20 +11,20 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    quote: 'The EXACT messages I needed to hear...',
-    author: 'Bonnie U.',
+    quote: 'Un bouquin qui va faire trembler les virilistes fragiles et respirer celles qui n\'ont plus envie de s\'excuser d\'exister. "Libre d\'être misandre", c\'est pas une punchline, c\'est un droit de réponse. Un cri politique et intime.',
+    author: 'Une lectrice',
   },
   {
-    quote: 'Her videos gave me the push...',
-    author: 'Shhivika C.',
+    quote: 'Enfin, quelqu\'un qui nomme les choses sans culpabilité. Ce livre m\'a libérée d\'une charge mentale que je traînais depuis trop longtemps. Radical, intelligent, nécessaire.',
+    author: 'Marie K.',
   },
   {
-    quote: 'Jenni and I tune into MarieTV...',
-    author: 'Sophie D.',
+    quote: 'C\'est un manifeste pour toutes celles qui en avaient marre de sourire poliment face à l\'inacceptable. Lena parle notre langue et nos frustrations deviennent des lignes de force.',
+    author: 'Sophie B.',
   },
   {
-    quote: "There's a special place in Heaven...",
-    author: 'Kongit F.',
+    quote: 'Un livre que je recommande à ma fille, à ma mère et à toutes mes amies. Parce que refuser de placer les hommes au centre, c\'est un acte de résistance que j\'assume entièrement.',
+    author: 'Ambre T.',
   },
 ];
 
@@ -56,10 +56,10 @@ export function TestimonialsCarousel() {
               fontSize: 'clamp(36px, 8vw, 56px)',
             }}
           >
-            Our Students Get Results
+            Vos retours
           </h2>
           <p className="text-lg md:text-xl text-gray-700">
-            Will You Be The Next Success Story?
+            Libre d'être misandre
           </p>
         </div>
 
@@ -85,12 +85,12 @@ export function TestimonialsCarousel() {
                 {currentTestimonial.author}
               </p>
 
-              {/* Get Inspired Link */}
+              {/* Read More Link */}
               <Link
-                href="/programs"
+                href="/testimonials"
                 className="inline-block text-sm font-semibold text-gray-900 border-b-2 border-gray-900 hover:text-gray-700 hover:border-gray-700 transition-colors duration-200"
               >
-                Get Inspired
+                Lire plus de retours
               </Link>
             </div>
           </div>

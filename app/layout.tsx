@@ -10,12 +10,12 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Marie Forleo | #1 NYT Bestselling Author & Founder of B-School",
-  description: "Create a business and life you love. Learn from Marie Forleo, #1 NYT bestselling author and founder of B-School.",
-  keywords: ["entrepreneurship", "business", "personal development", "coaching"],
+  title: "Lena Ben Ahmed | Formatrice, Autrice, Consultante en études de genre",
+  description: "Formatrice spécialisée en études de genre. Découvrez mes formations, mon essai 'Libre d'être misandre' et mes engagements féministes contre les violences et discriminations.",
+  keywords: ["études de genre", "féminisme", "formations", "autrice", "consultante", "violences", "discriminations"],
   openGraph: {
-    title: "Marie Forleo | #1 NYT Bestselling Author & Founder of B-School",
-    description: "Create a business and life you love.",
+    title: "Lena Ben Ahmed | Formatrice, Autrice, Consultante en études de genre",
+    description: "Formatrice spécialisée en études de genre. Découvrez mes formations, mon essai 'Libre d'être misandre' et mes engagements féministes contre les violences et discriminations.",
     type: "website",
   },
 };
