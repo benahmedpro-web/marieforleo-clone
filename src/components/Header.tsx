@@ -4,12 +4,10 @@ import { useState } from 'react';
 import { HamburgerIcon, CloseIcon } from './icons';
 
 const navigationLinks = [
-  { label: 'Blog', href: '/blog' },
-  { label: 'Shop', href: '/shop' },
-  { label: 'Programs', href: '/programs' },
-  { label: 'MarieTV', href: '/marietv' },
-  { label: 'Podcast', href: '/podcast' },
-  { label: 'About', href: '/about' },
+  { label: 'S\'outiller', href: '#formations' },
+  { label: 'Formations', href: '#formations' },
+  { label: 'Livre', href: '#livre' },
+  { label: 'Presse & Médias', href: '#presse' },
 ];
 
 export function Header() {
@@ -25,7 +23,7 @@ export function Header() {
         {/* Logo */}
         <div className="flex-shrink-0">
           <a href="/" className="text-[18px] md:text-[24px] font-serif font-bold text-[#1A1A1A]">
-            MARIE FORLEO
+            Lena Ben Ahmed
           </a>
         </div>
 
@@ -40,6 +38,12 @@ export function Header() {
               {link.label}
             </a>
           ))}
+          <a
+            href="#contact"
+            className="text-[14px] font-semibold px-6 py-2 rounded bg-[#E8B4A8] text-white hover:bg-[#D4A5A0] transition-colors duration-200"
+          >
+            TRAVAILLONS ENSEMBLE
+          </a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -67,6 +71,13 @@ export function Header() {
                 {link.label}
               </a>
             ))}
+            <a
+              href="#contact"
+              className="block text-[14px] font-semibold px-6 py-2 rounded bg-[#E8B4A8] text-white hover:bg-[#D4A5A0] transition-colors duration-200 text-center mt-4"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              TRAVAILLONS ENSEMBLE
+            </a>
           </div>
         </nav>
       )}
