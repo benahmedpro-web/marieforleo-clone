@@ -22,11 +22,11 @@ export default function Home() {
       <section id="parcours">
         <ParcoursSection />
       </section>
-      <PressSection />
-      <OptInSection />
       <section id="formations">
         <SOutillerSection />
       </section>
+      <PressSection />
+      <OptInSection />
       <TimeGeniusSection />
       <section id="livre" className="bg-white py-16 md:py-24">
         {/* Livre Section - "Libre d'être misandre" */}
