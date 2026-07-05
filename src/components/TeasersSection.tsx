@@ -21,7 +21,7 @@ const TEASERS = [
     label: 'Presse & Médias',
     title: 'Réseaux & engagements',
     description: 'Mes collaborations et partenariats avec les acteurs de la lutte contre les violences de genre.',
-    href: '#presse',
+    href: '/presse',
   },
 ];
 

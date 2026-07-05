@@ -8,7 +8,7 @@ const navigationLinks = [
   { label: 'S\'outiller', href: '/s-outiller' },
   { label: 'Formations', href: '#formations' },
   { label: 'Livre', href: '/livre' },
-  { label: 'Presse & Médias', href: '#presse' },
+  { label: 'Presse & Médias', href: '/presse' },
 ];
 
 export function Header() {
