@@ -4,6 +4,7 @@ import { Header } from '@/components/Header';
 import { HeroSection } from '@/components/HeroSection';
 import { AboutSection } from '@/components/AboutSection';
 import { MaDemarcheSection } from '@/components/MaDemarcheSection';
+import { ParcoursSection } from '@/components/ParcoursSection';
 import { PressSection } from '@/components/PressSection';
 import { OptInSection } from '@/components/OptInSection';
 import { TimeGeniusSection } from '@/components/TimeGeniusSection';
@@ -34,12 +35,8 @@ export default function Home() {
           <p className="text-gray-600">Un manifeste pour les femmes qui refusent les compromis</p>
         </div>
       </section>
-      <section id="parcours" className="bg-white py-16 md:py-24">
-        {/* Parcours Section - Timeline/Journey */}
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Parcours</h2>
-          <p className="text-gray-600">Découvrez mon chemin et mon évolution</p>
-        </div>
+      <section id="parcours">
+        <ParcoursSection />
       </section>
       <section id="retours" className="bg-white py-16 md:py-24">
         {/* Retours Section - Testimonials */}
