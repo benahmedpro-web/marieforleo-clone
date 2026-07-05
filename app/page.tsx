@@ -11,6 +11,7 @@ import { OptInSection } from '@/components/OptInSection';
 import { SOutillerSection } from '@/components/SOutillerSection';
 import { RessourcesSection } from '@/components/RessourcesSection';
 import { TimeGeniusSection } from '@/components/TimeGeniusSection';
+import { FormationsModulesSection } from '@/components/FormationsModulesSection';
 import { TestimonialsCarousel } from '@/components/TestimonialsCarousel';
 import { Footer } from '@/components/Footer';
 
@@ -34,6 +35,7 @@ export default function Home() {
       <PressSection />
       <OptInSection />
       <TimeGeniusSection />
+      <FormationsModulesSection />
       <section id="livre" className="bg-white py-16 md:py-24">
         {/* Livre Section - "Libre d'être misandre" */}
         <div className="container mx-auto text-center">
