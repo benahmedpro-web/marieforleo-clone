@@ -2,7 +2,7 @@
 
 const YOUTUBE_VIDEO_ID = 'g4obwVgsY5I';
 const YOUTUBE_URL = `https://youtu.be/${YOUTUBE_VIDEO_ID}`;
-const YOUTUBE_THUMBNAIL = `https://img.youtube.com/vi/${YOUTUBE_VIDEO_ID}/maxresdefault.jpg`;
+const YOUTUBE_THUMBNAIL = `https://img.youtube.com/vi/${YOUTUBE_VIDEO_ID}/hqdefault.jpg`;
 
 export function SOutillerSection() {
   return (
@@ -57,7 +57,7 @@ export function SOutillerSection() {
                 alt="Entre Elles — ELLE"
                 className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300"
                 onError={(e) => {
-                  e.currentTarget.src = `https://img.youtube.com/vi/${YOUTUBE_VIDEO_ID}/hqdefault.jpg`;
+                  e.currentTarget.src = `https://img.youtube.com/vi/${YOUTUBE_VIDEO_ID}/default.jpg`;
                 }}
               />
 
