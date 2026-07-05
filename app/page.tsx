@@ -5,7 +5,6 @@ import { HashScrollHandler } from '@/components/HashScrollHandler';
 import { HeroSection } from '@/components/HeroSection';
 import { AboutSection } from '@/components/AboutSection';
 import { MaDemarcheSection } from '@/components/MaDemarcheSection';
-import { ParcoursSection } from '@/components/ParcoursSection';
 import { PressSection } from '@/components/PressSection';
 import { OptInSection } from '@/components/OptInSection';
 import { SOutillerSection } from '@/components/SOutillerSection';
@@ -23,9 +22,6 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <MaDemarcheSection />
-      <section id="parcours">
-        <ParcoursSection />
-      </section>
       <section id="formations">
         <SOutillerSection />
       </section>
