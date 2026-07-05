@@ -5,6 +5,7 @@ import { HashScrollHandler } from '@/components/HashScrollHandler';
 import { HeroSection } from '@/components/HeroSection';
 import { AboutSection } from '@/components/AboutSection';
 import { MaDemarcheSection } from '@/components/MaDemarcheSection';
+import { TeasersSection } from '@/components/TeasersSection';
 import { PressSection } from '@/components/PressSection';
 import { OptInSection } from '@/components/OptInSection';
 import { TimeGeniusSection } from '@/components/TimeGeniusSection';
@@ -20,11 +21,14 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <MaDemarcheSection />
+      <TeasersSection />
       <section id="formations">
         <TimeGeniusSection />
         <FormationsModulesSection />
       </section>
-      <PressSection />
+      <section id="presse">
+        <PressSection />
+      </section>
       <OptInSection />
       <section id="livre" className="bg-white py-16 md:py-24">
         {/* Livre Section - "Libre d'être misandre" */}
