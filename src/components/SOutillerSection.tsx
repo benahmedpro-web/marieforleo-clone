@@ -35,7 +35,7 @@ export function SOutillerSection() {
             </p>
 
             <a
-              href="#formations"
+              href="#ressources"
               className="inline-block px-8 py-3 border-2 border-gray-900 text-gray-900 font-semibold hover:bg-gray-900 hover:text-white transition-colors duration-300"
             >
               S&apos;OUTILLER
@@ -96,9 +96,59 @@ export function SOutillerSection() {
                 </div>
               </div>
             </a>
+
+            {/* Resource type shortcuts */}
+            <div className="mt-6 border border-gray-200 divide-y divide-gray-200">
+              {[
+                { icon: <VideoIcon />, label: 'Vidéos', desc: 'Décryptages et interviews' },
+                { icon: <ArticleIcon />, label: 'Articles', desc: 'Analyses et réflexions' },
+                { icon: <PostIcon />, label: 'Posts', desc: 'Publications et actualités' },
+              ].map((item) => (
+                <a
+                  key={item.label}
+                  href="#ressources"
+                  className="flex items-center gap-4 px-5 py-4 hover:bg-gray-50 transition-colors duration-200"
+                >
+                  <span className="text-gray-700 flex-shrink-0">{item.icon}</span>
+                  <span className="flex-1">
+                    <span className="block font-semibold text-gray-900">{item.label}</span>
+                    <span className="block text-sm text-gray-500">{item.desc}</span>
+                  </span>
+                  <span className="text-gray-400 flex-shrink-0">→</span>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
     </section>
+  );
+}
+
+function VideoIcon() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
+      <rect x="2.5" y="5.5" width="14" height="13" rx="2" strokeLinejoin="round" />
+      <path d="M16.5 10l5-3v10l-5-3" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function ArticleIcon() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
+      <path d="M6 3h9l4 4v13a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1z" strokeLinejoin="round" />
+      <path d="M9 10h6M9 13.5h6M9 17h4" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function PostIcon() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
+      <rect x="3" y="4" width="18" height="14" rx="2" strokeLinejoin="round" />
+      <circle cx="8.5" cy="9.5" r="1.5" />
+      <path d="M4 16l4.5-4 3 3L17 9l3 3" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
   );
 }

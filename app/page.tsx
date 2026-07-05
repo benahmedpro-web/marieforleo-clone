@@ -8,6 +8,7 @@ import { ParcoursSection } from '@/components/ParcoursSection';
 import { PressSection } from '@/components/PressSection';
 import { OptInSection } from '@/components/OptInSection';
 import { SOutillerSection } from '@/components/SOutillerSection';
+import { RessourcesSection } from '@/components/RessourcesSection';
 import { TimeGeniusSection } from '@/components/TimeGeniusSection';
 import { TestimonialsCarousel } from '@/components/TestimonialsCarousel';
 import { Footer } from '@/components/Footer';
@@ -24,6 +25,9 @@ export default function Home() {
       </section>
       <section id="formations">
         <SOutillerSection />
+      </section>
+      <section id="ressources">
+        <RessourcesSection />
       </section>
       <PressSection />
       <OptInSection />
