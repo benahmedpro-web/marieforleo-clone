@@ -5,9 +5,9 @@ export function AboutSection() {
   return (
     <section className="bg-about py-16 md:py-24">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-center md:items-start">
-          {/* Left Column: Text Content */}
-          <div className="flex-1 w-full">
+        <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-center md:items-start md:order-reverse">
+          {/* Right Column: Text Content */}
+          <div className="flex-1 w-full md:order-2">
             {/* Greeting */}
             <p
               className="text-sm font-medium text-brown mb-6"
@@ -47,14 +47,14 @@ export function AboutSection() {
             </Link>
           </div>
 
-          {/* Right Column: Image */}
-          <div className="flex-1 w-full">
-            <div className="relative aspect-square md:aspect-auto md:h-96 lg:h-full rounded overflow-hidden">
+          {/* Left Column: Image */}
+          <div className="w-full md:w-auto md:flex-shrink-0 md:order-1">
+            <div className="relative w-full md:w-80 aspect-square rounded overflow-hidden">
               <Image
                 src="/images/lena-profile.jpg"
                 alt="Lena Ben Ahmed"
-                width={500}
-                height={600}
+                width={320}
+                height={320}
                 className="w-full h-full object-cover"
                 priority
               />
