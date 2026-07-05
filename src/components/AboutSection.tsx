@@ -48,13 +48,13 @@ export function AboutSection() {
           </div>
 
           {/* Left Column: Image */}
-          <div className="w-full md:w-auto md:flex-shrink-0">
-            <div className="relative w-full md:w-80 aspect-square rounded overflow-hidden">
+          <div className="w-full md:w-96 md:flex-shrink-0">
+            <div className="relative w-full aspect-square rounded overflow-hidden">
               <Image
                 src="/images/lena-profile.jpg"
                 alt="Lena Ben Ahmed"
-                width={320}
-                height={320}
+                width={400}
+                height={400}
                 className="w-full h-full object-cover"
                 priority
               />
