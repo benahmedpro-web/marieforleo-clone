@@ -32,10 +32,10 @@ export default function Home() {
       <section id="ressources">
         <RessourcesSection />
       </section>
-      <PressSection />
-      <OptInSection />
       <TimeGeniusSection />
       <FormationsModulesSection />
+      <PressSection />
+      <OptInSection />
       <section id="livre" className="bg-white py-16 md:py-24">
         {/* Livre Section - "Libre d'être misandre" */}
         <div className="container mx-auto text-center">
