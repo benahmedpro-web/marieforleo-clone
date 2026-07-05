@@ -40,7 +40,7 @@ export function AboutSection() {
 
             {/* Learn More Link */}
             <Link
-              href="/about"
+              href="#parcours"
               className="inline-block px-8 py-3 border-2 border-gray-900 text-gray-900 font-semibold hover:bg-gray-900 hover:text-white transition-colors duration-300"
             >
               EN SAVOIR PLUS
