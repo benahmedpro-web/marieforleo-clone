@@ -7,6 +7,7 @@ import { MaDemarcheSection } from '@/components/MaDemarcheSection';
 import { ParcoursSection } from '@/components/ParcoursSection';
 import { PressSection } from '@/components/PressSection';
 import { OptInSection } from '@/components/OptInSection';
+import { SOutillerSection } from '@/components/SOutillerSection';
 import { TimeGeniusSection } from '@/components/TimeGeniusSection';
 import { TestimonialsCarousel } from '@/components/TestimonialsCarousel';
 import { Footer } from '@/components/Footer';
@@ -23,12 +24,8 @@ export default function Home() {
       </section>
       <PressSection />
       <OptInSection />
-      <section id="formations" className="bg-white py-16 md:py-24">
-        {/* S'outiller Section - Learning Resources & Videos */}
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">S'outiller</h2>
-          <p className="text-gray-600">Ressources, vidéos et contenus pour progresser</p>
-        </div>
+      <section id="formations">
+        <SOutillerSection />
       </section>
       <TimeGeniusSection />
       <section id="livre" className="bg-white py-16 md:py-24">
