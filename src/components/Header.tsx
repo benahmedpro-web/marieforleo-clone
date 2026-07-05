@@ -7,7 +7,7 @@ import { HamburgerIcon, CloseIcon } from './icons';
 const navigationLinks = [
   { label: 'S\'outiller', href: '/s-outiller' },
   { label: 'Formations', href: '#formations' },
-  { label: 'Livre', href: '#livre' },
+  { label: 'Livre', href: '/livre' },
   { label: 'Presse & Médias', href: '#presse' },
 ];
 

@@ -15,7 +15,7 @@ const TEASERS = [
     label: 'Livre',
     title: "Libre d'être misandre",
     description: 'Un manifeste pour les femmes qui refusent les compromis.',
-    href: '#livre',
+    href: '/livre',
   },
   {
     label: 'Presse & Médias',
