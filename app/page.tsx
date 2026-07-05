@@ -3,6 +3,7 @@
 import { Header } from '@/components/Header';
 import { HeroSection } from '@/components/HeroSection';
 import { AboutSection } from '@/components/AboutSection';
+import { MaDemarcheSection } from '@/components/MaDemarcheSection';
 import { PressSection } from '@/components/PressSection';
 import { OptInSection } from '@/components/OptInSection';
 import { TimeGeniusSection } from '@/components/TimeGeniusSection';
@@ -15,6 +16,7 @@ export default function Home() {
       <Header />
       <HeroSection />
       <AboutSection />
+      <MaDemarcheSection />
       <PressSection />
       <OptInSection />
       <section id="formations" className="bg-white py-16 md:py-24">
