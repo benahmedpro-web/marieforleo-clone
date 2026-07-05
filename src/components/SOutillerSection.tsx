@@ -43,7 +43,7 @@ export function SOutillerSection() {
           </div>
 
           {/* Right Column: Video Card */}
-          <div>
+          <div className="lg:sticky lg:top-28">
             <a
               href={YOUTUBE_URL}
               target="_blank"
