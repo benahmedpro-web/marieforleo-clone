@@ -7,8 +7,6 @@ import { AboutSection } from '@/components/AboutSection';
 import { MaDemarcheSection } from '@/components/MaDemarcheSection';
 import { PressSection } from '@/components/PressSection';
 import { OptInSection } from '@/components/OptInSection';
-import { SOutillerSection } from '@/components/SOutillerSection';
-import { RessourcesSection } from '@/components/RessourcesSection';
 import { TimeGeniusSection } from '@/components/TimeGeniusSection';
 import { FormationsModulesSection } from '@/components/FormationsModulesSection';
 import { TestimonialsCarousel } from '@/components/TestimonialsCarousel';
@@ -23,13 +21,9 @@ export default function Home() {
       <AboutSection />
       <MaDemarcheSection />
       <section id="formations">
-        <SOutillerSection />
+        <TimeGeniusSection />
+        <FormationsModulesSection />
       </section>
-      <section id="ressources">
-        <RessourcesSection />
-      </section>
-      <TimeGeniusSection />
-      <FormationsModulesSection />
       <PressSection />
       <OptInSection />
       <section id="livre" className="bg-white py-16 md:py-24">
