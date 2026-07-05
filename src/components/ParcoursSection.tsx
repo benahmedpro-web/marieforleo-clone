@@ -1,4 +1,10 @@
+'use client';
+
+import { useState } from 'react';
+
 export function ParcoursSection() {
+  const [showAll, setShowAll] = useState(false);
+
   const milestones = [
     {
       year: '2026 →',
@@ -22,6 +28,24 @@ export function ParcoursSection() {
     },
   ];
 
+  const additionalMilestones = [
+    {
+      year: '2024',
+      title: 'Stage — CIDFF de l\'Aude',
+      subtitle: 'Narbonne · Interventions en milieu scolaire contre les stéréotypes de genre, stratégie de communication, participation au réseau VIF (Violences Intrafamiliales)',
+    },
+    {
+      year: '2022 — 2024',
+      title: 'Mémoire de recherche',
+      subtitle: 'Étude et analyse des rapports sociaux de domination dans le cadre du Master 2 Sociologie',
+    },
+    {
+      year: '2019 — 2022',
+      title: 'Licence de Psychologie',
+      subtitle: 'Psychopathologie, psychologie clinique et clinique transculturelle — Université de Picardie Jules Verne, Amiens',
+    },
+  ];
+
   return (
     <section className="bg-[#e8ddd0] py-16 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 md:px-8">
@@ -37,7 +61,7 @@ export function ParcoursSection() {
         </h2>
 
         {/* Timeline Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border border-gray-300 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border border-gray-300 mb-6">
           {milestones.map((milestone, index) => (
             <div
               key={index}
@@ -58,12 +82,39 @@ export function ParcoursSection() {
           ))}
         </div>
 
-        <a
-          href="#"
+        {/* Additional Milestones (revealed on expand) */}
+        {showAll && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border border-gray-300 mb-10">
+            {additionalMilestones.map((milestone, index) => (
+              <div
+                key={index}
+                className={`bg-white p-6 md:p-8 ${
+                  index > 0 ? 'border-t sm:border-t-0 sm:border-l border-gray-200' : ''
+                }`}
+              >
+                <p className="font-serif italic text-lg text-gray-800 mb-4">
+                  {milestone.year}
+                </p>
+                <p className="font-semibold text-gray-900 mb-2 leading-snug">
+                  {milestone.title}
+                </p>
+                <p className="text-sm text-gray-500 leading-snug">
+                  {milestone.subtitle}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {!showAll && <div className="mb-4" />}
+
+        <button
+          type="button"
+          onClick={() => setShowAll((prev) => !prev)}
           className="inline-block px-8 py-4 bg-gray-900 text-white text-sm font-semibold uppercase tracking-wide hover:bg-black transition-colors duration-300"
         >
-          Voir le parcours complet
-        </a>
+          {showAll ? 'Voir moins' : 'Voir le parcours complet'}
+        </button>
       </div>
     </section>
   );
